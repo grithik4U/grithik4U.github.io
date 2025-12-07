@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Ganesh | Fintech, AI & Blockchain Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #334155;
+            --accent: #38bdf8;
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--primary);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
+        
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 10%;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero h2 { font-size: 2rem; color: var(--text-gray); margin-bottom: 1.5rem; }
+        .hero p { max-width: 600px; color: var(--text-gray); margin-bottom: 2rem; }
+        
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn:hover { background: var(--accent); color: var(--primary); }
+
+        /* Sections General */
+        section { padding: 5rem 10%; }
+        .section-title { font-size: 2rem; margin-bottom: 3rem; color: var(--accent); position: relative; }
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--text-gray);
+            margin-top: 10px;
+        }
+
+        /* About & Skills */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 3rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        /* Experience */
+        .timeline-item {
+            border-left: 2px solid var(--secondary);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -7px;
+            top: 5px;
+        }
+        .role { font-size: 1.2rem; font-weight: bold; }
+        .company { color: var(--accent); margin-bottom: 0.5rem; }
+        .date { font-size: 0.9rem; color: var(--text-gray); margin-bottom: 1rem; }
+
+        /* Projects Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card h3 { margin-bottom: 1rem; }
+        .project-card .tech-stack {
+            font-size: 0.85rem; 
+            font-family: monospace; 
+            color: var(--accent);
+            margin-top: 1rem;
+        }
+        .project-links { margin-top: 1.5rem; }
+        .project-links a { margin-right: 1rem; font-size: 1.2rem; }
+
+        /* Contact */
+        .contact-container { text-align: center; max-width: 600px; margin: 0 auto; }
+        .social-links { 
+            margin-top: 2rem; 
+            display: flex; 
+            justify-content: center; 
+            gap: 2rem; 
+            font-size: 2rem; 
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; } /* Simplified for this snippet */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SG.</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h4>Hi, my name is</h4>
+        <h1>Sai Ganesh.</h1>
+        <h2>I build secure AI & Blockchain solutions.</h2>
+        <p>
+            Analytical Developer specializing in the intersection of Fintech, Tokenomics, and Cybersecurity. 
+            Currently automating regulatory finance in the Web3 ecosystem.
+        </p>
+        <a href="#projects" class="btn">Check out my work</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    With a Master's in Blockchain and Financial Technologies from the University of East London, 
+                    I have cultivated a strong foundation in both blockchain and artificial intelligence. 
+                    Academically and professionally, I have gained experience in building AI-driven applications 
+                    and exploring the intersection of web3 game development and AI model training.
+                </p>
+                <br>
+                <p>
+                    My background in Computer Science sparked my interest in penetration testing and OSINT, 
+                    inspiring me to explore these areas further. This foundation has fueled my passion for 
+                    developing secure and forward-thinking blockchain and AI solutions.
+                </p>
+            </div>
+            <div class="skills-container">
+                <h3>Core Technologies</h3>
+                <br>
+                <div class="skills-list">
+                    <span class="skill-tag">Python AI Development</span>
+                    <span class="skill-tag">Blockchain Code</span>
+                    <span class="skill-tag">Tokenomics</span>
+                    <span class="skill-tag">Big Data Analytics</span>
+                    <span class="skill-tag">Smart Contract Security</span>
+                    <span class="skill-tag">OSINT</span>
+                    <span class="skill-tag">Governance, Risk, & Compliance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="experience">
+        <h2 class="section-title">Where I've Worked</h2>
+        
+        <div class="timeline-item">
+            <div class="role">Finance & AI Data Analyst</div>
+            <div class="company">Risidio</div>
+            <div class="date">June 2025 - Present</div>
+            <p>Focusing on AI tools to automate regulatory finance in the Web3 ecosystem.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="role">Technical Pre-sales Analyst</div>
+            <div class="company">Brdge</div>
+            <div class="date">March 2025 - May 2025</div>
+            <p>Focused on streamlining workflows using AI to address business needs.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="role">Research and Tool Development</div>
+            <div class="company">University of East London</div>
+            <div class="date">Sept 2024 - Aug 2025</div>
+            <p>Conducted Research on AI, DeFi, and cybersecurity.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Notable Projects</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-gray);">
+            Selected works demonstrating my expertise in Python, Blockchain, and Security.
+            <br><em>(Visit my GitHub for full source code)</em>
+        </p>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>AI Regulatory Automation Tool</h3>
+                <p>
+                    A Python-based tool designed to automate financial compliance checks within a Web3 environment, 
+                    reducing manual reporting time.
+                </p>
+                <div class="tech-stack">Python • AI • Web3 • Finance</div>
+                <div class="project-links">
+                    <a href="https://github.com/grithik4U" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Smart Contract Security Auditor</h3>
+                <p>
+                    A framework for analyzing vulnerabilities in Solidity smart contracts, incorporating 
+                    ethical hacking principles to prevent re-entrancy attacks.
+                </p>
+                <div class="tech-stack">Solidity • Blockchain • Cybersecurity</div>
+                <div class="project-links">
+                    <a href="https://github.com/grithik4U" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>OSINT Data Analyzer</h3>
+                <p>
+                    Big Data analytics application that aggregates open-source intelligence to identify 
+                    potential security threats in real-time.
+                </p>
+                <div class="tech-stack">Big Data • OSINT • Analytics</div>
+                <div class="project-links">
+                    <a href="https://github.com/grithik4U" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <p>
+                I am currently based in London and open to new opportunities in AI, Blockchain, and Fintech. 
+                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            <div class="social-links">
+                <a href="mailto:grithik.uk@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/saiganesh114" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/grithik4U?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <br><br>
+            <a href="mailto:grithik.uk@gmail.com" class="btn">Say Hello</a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--text-gray); font-size: 0.8rem;">
+        <p>Designed & Built by Sai Ganesh</p>
+    </footer>
+
+</body>
+</html>
